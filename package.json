@@ -1,0 +1,18 @@
+{
+  "name": "virtualdom",
+  "version": "0.1",
+  "description": "A simple Virtual DOM implementation",
+  "main": "lib/index.js",
+  "author": "Carlos Roberto Gomes Junior <carlos.rberto@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "rollup": "^0.57.1",
+    "static-server": "^2.2.0"
+  },
+  "scripts": {
+    "build":
+      "rollup src/index.js --o lib/index.js -f umd --name \"VirtualDom\"",
+    "example":
+      "rollup example/index.js --o example/build/index.js -f umd --name \"example\" && static-server example --port 3000 --no-nocache"
+  }
+}
